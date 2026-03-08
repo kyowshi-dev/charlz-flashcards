@@ -1,3 +1,4 @@
+// card functions
 function createCard(id, question, answers, correctAnswer) {
   var card = {
     id: id,
@@ -8,6 +9,7 @@ function createCard(id, question, answers, correctAnswer) {
   return card;
 }
 
+// correct or incorrect
 function evaluateGuess(guess, correctAnswer) {
   if (guess === correctAnswer) {
     return "correct!";
@@ -16,7 +18,18 @@ function evaluateGuess(guess, correctAnswer) {
   }
 }
 
+// deck functions
+function createDeck(cards) {
+  return cards;
+}
+
+function countCards(deck) {
+  return deck.length;
+}
+
 module.exports = {
   createCard,
   evaluateGuess,
+  createDeck,
+  countCards,
 };
